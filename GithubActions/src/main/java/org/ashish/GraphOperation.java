@@ -8,14 +8,18 @@ import java.util.Scanner;
  */
 public final class GraphOperation {
 
-    public GraphOperation() { }
+    /**
+     *
+     */
+    private GraphOperation() { }
 
     /**
      * Operation menu for user to be performed on graph.
      * @param graph graph to be used to perform operation
      * @param totalVertex total number of vertices of the graph
      */
-    public static void operation(final ArrayList<Edge>[] graph, final int totalVertex) {
+    public static void operation
+    (final ArrayList<Edge>[] graph, final int totalVertex) {
         Scanner sc = new Scanner(System.in);
         char choice;
         do {
@@ -26,7 +30,8 @@ public final class GraphOperation {
             int op = sc.nextInt();
             switch (op) {
                 case 1:
-                    System.out.println("Enter a Vertex to find its Neighbours :");
+                    System.out.println("Enter a Vertex to " +
+                            "find its Neighbours :");
                     int vr = sc.nextInt();
                     findNeighbours(graph, vr);
                     break;
@@ -50,7 +55,8 @@ public final class GraphOperation {
      * @param graph
      * @param vertex
      */
-    public static void findNeighbours(final ArrayList<Edge>[] graph, final int vertex) {
+    public static void findNeighbours
+    (final ArrayList<Edge>[] graph, final int vertex) {
 
         for (int i = 0; i < graph[vertex].size(); i++) {
             System.out.print(graph[vertex].get(i).des + ", ");
