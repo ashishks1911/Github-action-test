@@ -9,14 +9,14 @@ import java.util.Queue;
  */
 public class GraphTraversal {
     /**
-     * BFS algorithm for graph traversal
+     * BFS algorithm for graph traversal.
      * @param graph graph to be traversed
      * @param startIdx starting node for traversal
      * @param totalVertex total number of vertices of the graph
      *
      */
-    public static void BFS(final ArrayList<Edge>[] graph, int startIdx , int totalVertex)
-    {
+    public static void BFS(
+            final ArrayList<Edge>[] graph, int startIdx, int totalVertex) {
         Queue<Integer> queue = new LinkedList<>();
 
         //to track visited nodes
