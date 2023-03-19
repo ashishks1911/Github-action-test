@@ -15,7 +15,7 @@ public class GraphTraversal {
      * @param totalVertex total number of vertices of the graph
      *
      */
-    public static void BFS(ArrayList<Edge> graph[] ,int startIdx ,int totalVertex)
+    public static void BFS(final ArrayList<Edge>[] graph, int startIdx , int totalVertex)
     {
         Queue<Integer> queue = new LinkedList<>();
 
