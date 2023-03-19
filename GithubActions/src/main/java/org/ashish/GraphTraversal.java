@@ -7,7 +7,13 @@ import java.util.Queue;
 /**
  * Defines BFS and DFS algorithms for Graph Traversal.
  */
-public class GraphTraversal {
+final public class GraphTraversal {
+
+    /**
+     *
+     */
+    private GraphTraversal() { }
+
     /**
      * BFS algorithm for graph traversal.
      * @param graph graph to be traversed
@@ -15,13 +21,8 @@ public class GraphTraversal {
      * @param totalVertex total number of vertices of the graph
      *
      */
-
-    /**
-     *
-     */
-    private GraphTraversal() { }
-    public static void bfs(
-            final ArrayList<Edge>[] graph, final int startIdx, final int totalVertex) {
+    public static void bfs(final ArrayList<Edge>[] graph,
+                           final int startIdx, final int totalVertex) {
         Queue<Integer> queue = new LinkedList<>();
 
         //to track visited nodes
@@ -34,11 +35,11 @@ public class GraphTraversal {
             //checks if current node is visited or not
             if (!visited[curr]) {
 
-                System.out.print(curr +", ");
+                System.out.print(curr + ", ");
                 //marks the node visited
-                visited[curr]=true;
+                visited[curr] = true;
                 //find its neighbours
-                for (int i=0; i < graph[curr].size(); i++) {
+                for (int i = 0; i < graph[curr].size(); i++) {
                     //adds all neighbours in the queue...
                     queue.add(graph[curr].get(i).des);
                 }
