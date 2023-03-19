@@ -3,6 +3,7 @@ package org.ashish;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * Defines BFS and DFS algorithms for Graph Traversal.
@@ -46,5 +47,32 @@ public final class GraphTraversal {
             }
         }
 
+    }
+
+
+    /**
+     * DFS algorithm for graph traversal.
+     * @param graph graph to be traversed
+     * @param start starting node for traversal
+     * @param vertex total number of vertices of the graph
+     */
+    public static void dfs( final ArrayList<Edge>[] graph,
+                            final int start, final int vertex){
+
+        Stack<Integer> stack = new Stack<>();
+        boolean[] visited = new boolean[vertex];
+        stack.push(start);
+        while (!stack.isEmpty()){
+            int curr = stack.pop();
+            if (!visited[curr]){
+
+                System.out.print(curr + ", ");
+                visited[curr] = true;
+                for (int i = 0; i < graph[curr].size(); i++){
+                    stack.push(graph[curr].get(i).des);
+                }
+            }
+
+        }
     }
 }
