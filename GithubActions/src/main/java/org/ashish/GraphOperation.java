@@ -29,7 +29,8 @@ public final class GraphOperation {
             System.out.println("Option 3 : Traverse the Graph (DFS) :");
             int op = sc.nextInt();
             switch (op) {
-                case 1: System.out.println("Enter a Vertex to find its Neighbours :");
+                case 1: System.out.println("Enter a Vertex "
+                        + "to find its Neighbours :");
                     int vr = sc.nextInt();
                     findNeighbours(graph, vr);
                     break;
