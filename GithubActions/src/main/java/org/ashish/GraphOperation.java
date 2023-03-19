@@ -38,7 +38,7 @@ public final class GraphOperation {
                 case 2:
                     System.out.println("Enter Starting element : ");
                     int st = sc.nextInt();
-                    GraphTraversal.BFS(graph, st, totalVertex);
+                    GraphTraversal.bfs(graph, st, totalVertex);
                     break;
 
                 default:
