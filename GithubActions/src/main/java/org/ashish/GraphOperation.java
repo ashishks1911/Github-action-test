@@ -6,9 +6,9 @@ import java.util.Scanner;
 /**
  * Provide Operations to be performed on the Graph...
  */
-public class GraphOperation {
+public final class GraphOperation {
 
-    private GraphOperation(){}
+    public GraphOperation() { }
 
     /**
      * Operation menu for user to be performed on graph.
