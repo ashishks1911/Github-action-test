@@ -18,8 +18,8 @@ public final class GraphOperation {
      * @param graph graph to be used to perform operation
      * @param totalVertex total number of vertices of the graph
      */
-    public static void operation
-    (final ArrayList<Edge>[] graph, final int totalVertex) {
+    public static void operation(
+            final ArrayList<Edge>[] graph, final int totalVertex) {
         Scanner sc = new Scanner(System.in);
         char choice;
         do {
@@ -29,9 +29,7 @@ public final class GraphOperation {
             System.out.println("Option 3 : Traverse the Graph (DFS) :");
             int op = sc.nextInt();
             switch (op) {
-                case 1:
-                    System.out.println("Enter a Vertex to " +
-                            "find its Neighbours :");
+                case 1: System.out.println("Enter a Vertex to find its Neighbours :");
                     int vr = sc.nextInt();
                     findNeighbours(graph, vr);
                     break;
@@ -55,8 +53,8 @@ public final class GraphOperation {
      * @param graph
      * @param vertex
      */
-    public static void findNeighbours
-    (final ArrayList<Edge>[] graph, final int vertex) {
+    public static void findNeighbours(
+            final ArrayList<Edge>[] graph, final int vertex) {
 
         for (int i = 0; i < graph[vertex].size(); i++) {
             System.out.print(graph[vertex].get(i).des + ", ");
