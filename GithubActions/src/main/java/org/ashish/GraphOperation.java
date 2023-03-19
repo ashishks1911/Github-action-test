@@ -13,7 +13,7 @@ public class GraphOperation {
      * @param graph graph to be used to perform operation
      * @param totalVertex total number of vertices of the graph
      */
-    public static void operation(final ArrayList<Edge>[] graph ,final int totalVertex) {
+    public static void operation(final ArrayList<Edge>[] graph , final int totalVertex) {
         Scanner sc = new Scanner(System.in);
         char choice;
         do {
@@ -44,13 +44,13 @@ public class GraphOperation {
     }
 
     /**
-     * finds neighbours of a particular node
+     * finds neighbours of a particular node.
      * @param graph
      * @param vertex
      */
-    public static void findNeighbours(final ArrayList<Edge> graph[] ,final int vertex) {
+    public static void findNeighbours(final ArrayList<Edge>[] graph, final int vertex) {
 
-        for (int i = 0; i < graph[vertex].size() ; i++) {
+        for (int i = 0 ; i < graph[vertex].size() ; i++) {
             System.out.print(graph[vertex].get(i).des + ", ");
         }
     }
