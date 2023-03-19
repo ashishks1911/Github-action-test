@@ -7,7 +7,7 @@ import java.util.Queue;
 /**
  * Defines BFS and DFS algorithms for Graph Traversal.
  */
-final public class GraphTraversal {
+public final class GraphTraversal {
 
     /**
      *
